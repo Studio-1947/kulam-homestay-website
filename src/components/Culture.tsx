@@ -18,7 +18,7 @@ const Culture = () => {
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
-            <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Our Story</span>
+            <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Our Culture</span>
             <h2 className="text-5xl md:text-7xl font-serif font-bold text-primary-500 leading-[0.95] tracking-tighter">
               Rooted in tradition, <br/>
               <span className="italic font-light text-accent-500">defined by nature.</span>
