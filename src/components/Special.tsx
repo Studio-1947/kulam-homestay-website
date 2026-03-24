@@ -19,7 +19,7 @@ const Special = () => {
               viewport={{ once: true }}
               transition={{ duration: 1 }}
             >
-              <span className="text-accent-500 font-bold tracking-[0.4em] text-[10px] uppercase mb-6 block">The Essence</span>
+              <span className="text-accent-500 font-bold tracking-[0.4em] text-[10px] uppercase mb-6 block">Why Us</span>
               <h2 className="text-6xl md:text-8xl font-serif font-bold text-primary-500 leading-[0.85] mb-10 tracking-tighter">
                 A journey <br/>
                 <span className="italic font-light text-accent-500">beyond.</span>
@@ -48,13 +48,6 @@ const Special = () => {
                   </motion.div>
                 ))}
               </div>
-
-              <motion.button 
-                whileHover={{ x: 10 }}
-                className="group flex items-center gap-6 text-[10px] font-black tracking-[0.4em] text-primary-500 uppercase"
-              >
-                Book Your Story <ArrowRight size={20} className="text-accent-500" />
-              </motion.button>
             </motion.div>
           </div>
 

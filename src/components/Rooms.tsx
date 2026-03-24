@@ -70,9 +70,9 @@ const Rooms = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                className="w-full lg:w-1/2"
+                className="w-full lg:w-1/2 h-full"
               >
-                <div className="relative h-[400px] md:h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl border border-border group">
+                <div className="relative h-full min-h-[400px] md:min-h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-border group">
                   <Image
                     src={room.image}
                     alt={room.title}

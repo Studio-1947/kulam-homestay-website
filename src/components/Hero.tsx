@@ -129,7 +129,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
         onClick={() => document.getElementById('culture')?.scrollIntoView({ behavior: 'smooth' })}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-accent-500 transition-all flex flex-col items-center gap-2 group"
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-accent-500 transition-all flex flex-col items-center gap-2 group"
       >
         <span className="text-[8px] font-bold tracking-[0.4em] uppercase group-hover:tracking-[0.6em] transition-all">Discover</span>
         <ArrowDown size={20} strokeWidth={1.5} className="animate-bounce" />

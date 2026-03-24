@@ -11,7 +11,7 @@ const Boutique = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Editorial Header - Matching "Our Story" style */}
-        <div className="flex flex-col md:flex-row items-start justify-between mb-24 gap-8">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const Boutique = () => {
           >
             <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block flex items-center gap-2">
               <ShoppingBag size={14} />
-              Shop Local
+              Local Boutique Shop
             </span>
             <h2 className="text-5xl md:text-7xl font-serif font-bold text-primary-500 leading-[0.95] tracking-tighter">
               Handcrafted <br/>
