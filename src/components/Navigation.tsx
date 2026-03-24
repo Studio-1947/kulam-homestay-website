@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { X, Instagram, Facebook, ArrowRight } from 'lucide-react';
+import { X, Instagram, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { navLinks } from '@/data/navigation';
@@ -60,12 +60,6 @@ const Navigation = () => {
               className={`object-contain transition-all duration-500 ${isScrolled ? 'scrolled-logo' : 'default-logo'}`} 
             />
           </span>
-          {/* Enhanced Branding Contrast */}
-          <span className={`font-serif font-bold text-2xl tracking-tighter transition-colors duration-500 ${
-            isScrolled ? 'text-primary-500' : 'text-white text-legible'
-          }`}>
-            Kulam
-          </span>
         </button>
 
         <button
@@ -108,15 +102,16 @@ const Navigation = () => {
             >
               <div>
                 <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase block mb-6">Contact</span>
-                <p className="text-white text-2xl font-serif italic mb-2">{siteConfig.email}</p>
-                <p className="text-white/60 font-sans font-medium">{siteConfig.phone}</p>
+                <p className="text-white text-2xl font-serif italic mb-2">ruputhapa77@gmail.com</p>
+                <p className="text-white/60 font-sans font-medium">+91 83738 19862</p>
               </div>
 
               <div>
                 <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase block mb-6">Social</span>
                 <div className="flex gap-8 text-white">
-                  <Instagram size={24} className="hover:text-accent-500 cursor-pointer transition-colors" />
-                  <Facebook size={24} className="hover:text-accent-500 cursor-pointer transition-colors" />
+                  <a href="https://www.instagram.com/kulamhomestay2025/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-500 cursor-pointer transition-colors">
+                    <Instagram size={24} />
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -132,25 +127,46 @@ const Navigation = () => {
 
               <div className="flex flex-col space-y-8 lg:space-y-6">
                 {navLinks.map((link, i) => (
-                  <motion.button
-                    key={link.id}
-                    initial={{ x: 50, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.1 * i + 0.3, duration: 0.6 }}
-                    onClick={() => scrollToSection(link.id)}
-                    className="group text-left flex items-baseline gap-8"
-                  >
-                    <span className="text-accent-500/40 font-serif italic text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
-                    <div className="flex flex-col">
-                      <span className="text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
-                        {link.label}
-                      </span>
-                      <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
-                        {link.subtitle}
-                      </span>
-                    </div>
-                    <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={48} />
-                  </motion.button>
+                  link.href ? (
+                    <a
+                      key={link.id}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group text-left flex items-baseline gap-8"
+                    >
+                      <span className="text-accent-500/40 font-serif italic text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
+                      <div className="flex flex-col">
+                        <span className="text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
+                          {link.label}
+                        </span>
+                        <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
+                          {link.subtitle}
+                        </span>
+                      </div>
+                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={48} />
+                    </a>
+                  ) : (
+                    <motion.button
+                      key={link.id}
+                      initial={{ x: 50, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.1 * i + 0.3, duration: 0.6 }}
+                      onClick={() => scrollToSection(link.id)}
+                      className="group text-left flex items-baseline gap-8"
+                    >
+                      <span className="text-accent-500/40 font-serif italic text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
+                      <div className="flex flex-col">
+                        <span className="text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
+                          {link.label}
+                        </span>
+                        <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
+                          {link.subtitle}
+                        </span>
+                      </div>
+                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={48} />
+                    </motion.button>
+                  )
                 ))}
               </div>
             </div>
@@ -159,7 +175,6 @@ const Navigation = () => {
             <div className="lg:hidden p-10 mt-auto border-t border-white/10 flex justify-between items-center text-white">
                <div className="flex gap-8">
                  <Instagram size={22} />
-                 <Facebook size={22} />
                </div>
                <span className="text-[10px] font-bold tracking-widest uppercase italic opacity-60 text-accent-500">Kulam Homestay</span>
             </div>

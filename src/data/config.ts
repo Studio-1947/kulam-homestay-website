@@ -21,7 +21,7 @@ export const siteConfig: SiteConfig = {
   address: 'Village Road, Mirik, Darjeeling',
   location: 'Mirik, West Bengal, India',
   socialLinks: {
-    instagram: 'https://instagram.com',
+    instagram: 'https://www.instagram.com/kulamhomestay2025/',
     facebook: 'https://facebook.com',
     youtube: 'https://youtube.com',
   },

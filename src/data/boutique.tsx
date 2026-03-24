@@ -1,8 +1,8 @@
-import { Package, Sparkles, Gift, ShoppingBag } from 'lucide-react';
+import Image from 'next/image';
 
 export interface BoutiqueHighlight {
   id: string;
-  icon: React.ReactNode;
+  image: string;
   title: string;
   description: string;
 }
@@ -10,25 +10,25 @@ export interface BoutiqueHighlight {
 export const boutiqueHighlights: BoutiqueHighlight[] = [
   {
     id: 'handwoven-textiles',
-    icon: <Package className="w-6 h-6" />,
+    image: '/textiles.png',
     title: 'Handwoven Textiles',
     description: 'Preserving age-old patterns crafted by the women of Mirik village.',
   },
   {
     id: 'organic-spices',
-    icon: <Sparkles className="w-6 h-6" />,
+    image: '/spices.png',
     title: 'Organic Spices',
     description: 'Small-batch, sun-dried spices sourced from local hill-side farmers.',
   },
   {
     id: 'mirik-pottery',
-    icon: <Gift className="w-6 h-6" />,
+    image: '/pottery.png',
     title: 'Mirik Pottery',
     description: 'Traditional clay vessels hand-shaped by village work masters.',
   },
   {
     id: 'natural-essentials',
-    icon: <ShoppingBag className="w-6 h-6" />,
+    image: '/natural.png',
     title: 'Natural Essentials',
     description: 'Soaps and oils infused with wild-harvested herbs from our forests.',
   },
