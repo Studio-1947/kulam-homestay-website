@@ -43,7 +43,7 @@ const Special = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-serif font-bold text-primary-500 mb-1">{feature.title}</h4>
-                      <p className="text-xs text-text-muted font-bold tracking-widest uppercase">{feature.description}</p>
+                      <p className="text-sm text-text-muted font-bold tracking-widest uppercase">{feature.description}</p>
                     </div>
                   </motion.div>
                 ))}

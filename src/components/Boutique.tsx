@@ -11,7 +11,7 @@ const Boutique = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Editorial Header - Matching "Our Story" style */}
-        <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
+        <div className="flex flex-col md:flex-row items-start justify-between mb-24 gap-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const Boutique = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <h4 className="text-base font-serif font-bold text-primary-500 mb-1 tracking-tight">{item.title}</h4>
-              <p className="text-text-muted text-xs leading-relaxed">{item.description}</p>
+              <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>
