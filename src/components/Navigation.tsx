@@ -133,18 +133,18 @@ const Navigation = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group text-left flex items-baseline gap-8"
+                      className="group text-left flex items-baseline gap-4 md:gap-8"
                     >
-                      <span className="text-accent-500/40 font-serif italic text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
+                      <span className="text-accent-500/40 font-serif italic text-xl md:text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
                       <div className="flex flex-col">
-                        <span className="text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
+                        <span className="text-3xl md:text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
                           {link.label}
                         </span>
-                        <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
+                        <span className="text-[10px] md:text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
                           {link.subtitle}
                         </span>
                       </div>
-                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={48} />
+                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={32} />
                     </a>
                   ) : (
                     <motion.button
@@ -153,18 +153,18 @@ const Navigation = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.1 * i + 0.3, duration: 0.6 }}
                       onClick={() => scrollToSection(link.id)}
-                      className="group text-left flex items-baseline gap-8"
+                      className="group text-left flex items-baseline gap-4 md:gap-8"
                     >
-                      <span className="text-accent-500/40 font-serif italic text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
+                      <span className="text-accent-500/40 font-serif italic text-xl md:text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
                       <div className="flex flex-col">
-                        <span className="text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
+                        <span className="text-3xl md:text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
                           {link.label}
                         </span>
-                        <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
+                        <span className="text-[10px] md:text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
                           {link.subtitle}
                         </span>
                       </div>
-                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={48} />
+                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={32} />
                     </motion.button>
                   )
                 ))}
@@ -172,11 +172,14 @@ const Navigation = () => {
             </div>
 
             {/* Mobile Bottom Footer */}
-            <div className="lg:hidden p-10 mt-auto border-t border-white/10 flex justify-between items-center text-white">
+            <div className="lg:hidden p-10 mt-auto border-t border-white/10 flex flex-col gap-4 text-white">
                <div className="flex gap-8">
                  <Instagram size={22} />
                </div>
-               <span className="text-[10px] font-bold tracking-widest uppercase italic opacity-60 text-accent-500">Kulam Homestay</span>
+               <div className="flex flex-col gap-1 text-left">
+                 <a href="mailto:ruputhapa77@gmail.com" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">ruputhapa77@gmail.com</a>
+                 <a href="tel:+918373819862" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">+91 83738 19862</a>
+               </div>
             </div>
           </motion.div>
         )}
