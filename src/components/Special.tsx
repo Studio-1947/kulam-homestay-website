@@ -1,119 +1,138 @@
-import { Star, TreePine, Home, Utensils, Sun, Moon } from 'lucide-react';
+"use client";
+
+import { motion } from 'framer-motion';
+import { Star, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { specialFeatures } from '@/data/special';
 
 const Special = () => {
-  const features = [
-    {
-      icon: <TreePine className="w-8 h-8" />,
-      title: 'Surrounded by Nature',
-      description:
-        'Wake up to birdsong and fall asleep under starlit skies. Our homestay is nestled in 5 acres of pristine forest.',
-    },
-    {
-      icon: <Home className="w-8 h-8" />,
-      title: 'Authentic Architecture',
-      description:
-        'Experience traditional Kerala-style architecture with modern comforts, built using sustainable local materials.',
-    },
-    {
-      icon: <Utensils className="w-8 h-8" />,
-      title: 'Farm-to-Table Dining',
-      description:
-        'Savor organic meals prepared with vegetables and herbs from our own garden, cooked in traditional style.',
-    },
-    {
-      icon: <Sun className="w-8 h-8" />,
-      title: 'Slow Living Philosophy',
-      description:
-        'Disconnect from the rush and reconnect with yourself. No TVs, just nature, books, and meaningful conversations.',
-    },
-    {
-      icon: <Moon className="w-8 h-8" />,
-      title: 'Peaceful Ambiance',
-      description:
-        'Find your inner peace in our meditation garden, yoga pavilion, and serene pond with lotus flowers.',
-    },
-    {
-      icon: <Star className="w-8 h-8" />,
-      title: 'Personalized Experience',
-      description:
-        'We host only 3 families at a time, ensuring personalized attention and an intimate, home-like atmosphere.',
-    },
-  ];
-
   return (
-    <section id="special" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-forest-900 mb-4">
-            Why We Are Special
-          </h2>
-          <div className="w-24 h-1 bg-forest-600 mx-auto mb-6"></div>
-          <p className="text-lg text-forest-700 max-w-3xl mx-auto leading-relaxed">
-            Kulam Homestay is not just a place to stay; it's a journey back to
-            simplicity, authenticity, and the art of slow living.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group bg-gradient-to-br from-beige-50 to-forest-50 rounded-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+    <section id="special" className="py-24 md:py-48 bg-background relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row gap-24 items-start">
+          
+          {/* Left: Text Content Suite */}
+          <div className="lg:w-1/2 z-20">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
             >
-              <div className="text-forest-600 mb-4 group-hover:scale-110 transition-transform duration-300">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-forest-900 mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-forest-700 leading-relaxed">
-                {feature.description}
+              <span className="text-accent-500 font-bold tracking-[0.4em] text-[10px] uppercase mb-6 block">The Essence</span>
+              <h2 className="text-6xl md:text-8xl font-serif font-bold text-primary-500 leading-[0.85] mb-10 tracking-tighter">
+                A journey <br/>
+                <span className="italic font-light text-accent-500">beyond.</span>
+              </h2>
+              <p className="text-xl text-text-secondary font-medium leading-relaxed mb-16 max-w-md">
+                Kulam is a curated short story of slow living. We've removed the noise to make room for nature's gentle rhythm.
               </p>
-            </div>
-          ))}
-        </div>
 
-        <div className="relative rounded-3xl overflow-hidden">
-          <img
-            src="https://images.pexels.com/photos/1438834/pexels-photo-1438834.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="Peaceful homestay view"
-            className="w-full h-96 object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-forest-900/80 to-forest-700/80 flex items-center justify-center">
-            <div className="text-center text-white px-4">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                Your Home Away From Home
-              </h3>
-              <p className="text-xl mb-6 text-beige-100">
-                Where time slows down and life feels meaningful again
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
-                  <p className="text-2xl font-bold">4.9/5</p>
-                  <p className="text-sm text-beige-200">Guest Rating</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
-                  <p className="text-2xl font-bold">200+</p>
-                  <p className="text-sm text-beige-200">Happy Guests</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
-                  <p className="text-2xl font-bold">5 Acres</p>
-                  <p className="text-sm text-beige-200">Of Nature</p>
-                </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10 mb-16">
+                {specialFeatures.map((feature) => (
+                  <motion.div
+                    key={feature.id}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="flex gap-4 items-start group"
+                  >
+                    <div className="text-accent-500 mt-1 transition-transform duration-500 group-hover:scale-110">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-serif font-bold text-primary-500 mb-1">{feature.title}</h4>
+                      <p className="text-xs text-text-muted font-bold tracking-widest uppercase">{feature.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </div>
+
+              <motion.button 
+                whileHover={{ x: 10 }}
+                className="group flex items-center gap-6 text-[10px] font-black tracking-[0.4em] text-primary-500 uppercase"
+              >
+                Book Your Story <ArrowRight size={20} className="text-accent-500" />
+              </motion.button>
+            </motion.div>
           </div>
-        </div>
 
-        <div className="mt-16 bg-gradient-to-r from-beige-600 to-beige-500 rounded-2xl p-8 md:p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Experience Slow Living?</h3>
-          <p className="text-lg mb-6 text-beige-50 max-w-2xl mx-auto">
-            Book your stay at Kulam Homestay and rediscover the joy of simple
-            pleasures, meaningful connections, and the beauty of doing nothing.
-          </p>
-          <button className="px-10 py-4 bg-white text-forest-800 rounded-lg hover:bg-beige-50 transition-all transform hover:scale-105 shadow-lg font-semibold text-lg">
-            Book Your Stay
-          </button>
+          {/* Right: Overlapping Image Collage */}
+          <div className="lg:w-1/2 relative h-[600px] md:h-[800px] w-full">
+            
+            {/* Main Tall Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 1.1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute top-0 right-0 w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-2xl z-10 border border-border"
+            >
+              <Image
+                src="/outside.jpg"
+                alt="Mirik Outdoors"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-primary-900/10 mix-blend-multiply" />
+            </motion.div>
+
+            {/* Bottom Left Detail Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 1.2 }}
+              className="absolute bottom-0 left-0 w-[55%] h-[45%] rounded-2xl overflow-hidden shadow-2xl z-30 border-[10px] border-background"
+            >
+              <Image
+                src="/tea.jpg"
+                alt="Local Tea Culture"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+                className="object-cover"
+              />
+            </motion.div>
+
+            {/* Small Floating Accent Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8, duration: 1.2 }}
+              className="absolute top-[15%] left-[-10%] w-[40%] h-[30%] rounded-xl overflow-hidden shadow-xl z-20 border-[6px] border-background hidden md:block"
+            >
+              <Image
+                src="/bath1.jpg"
+                alt="Authentic Details"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+                className="object-cover"
+              />
+            </motion.div>
+
+            {/* Floating Trust Badge */}
+            <motion.div
+              initial={{ opacity: 0, rotate: -10 }}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1 }}
+              className="absolute top-[-20px] right-[-20px] bg-accent-500 p-8 rounded-full shadow-2xl z-40 flex flex-col items-center justify-center text-white"
+            >
+              <div className="flex gap-0.5 mb-1">
+                {[...Array(5)].map((_, i) => <Star key={i} size={10} fill="white" />)}
+              </div>
+              <span className="text-2xl font-serif font-bold leading-none">4.9</span>
+              <span className="text-[8px] font-black tracking-widest uppercase opacity-80">Rating</span>
+            </motion.div>
+
+          </div>
+
         </div>
       </div>
     </section>

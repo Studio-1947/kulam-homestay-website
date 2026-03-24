@@ -1,92 +1,80 @@
-import { Heart, Users, Leaf, Book } from 'lucide-react';
+"use client";
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { cultureHighlights } from '@/data/culture';
 
 const Culture = () => {
-  const culturalHighlights = [
-    {
-      icon: <Heart className="w-12 h-12" />,
-      title: 'Warm Hospitality',
-      description:
-        'Experience genuine care and warmth that makes you feel like family from the moment you arrive.',
-    },
-    {
-      icon: <Users className="w-12 h-12" />,
-      title: 'Community Living',
-      description:
-        'Engage with local communities, participate in daily rituals, and create meaningful connections.',
-    },
-    {
-      icon: <Leaf className="w-12 h-12" />,
-      title: 'Sustainable Practices',
-      description:
-        'We honor nature through organic farming, rainwater harvesting, and eco-friendly living.',
-    },
-    {
-      icon: <Book className="w-12 h-12" />,
-      title: 'Traditional Wisdom',
-      description:
-        'Learn ancient practices, traditional cooking methods, and time-honored crafts from locals.',
-    },
-  ];
-
   return (
-    <section id="culture" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-forest-900 mb-4">
-            Our Culture
-          </h2>
-          <div className="w-24 h-1 bg-forest-600 mx-auto mb-6"></div>
-          <p className="text-lg text-forest-700 max-w-3xl mx-auto leading-relaxed">
-            At Kulam Homestay, we celebrate the rich tapestry of traditions,
-            values, and practices that have been passed down through generations.
-            Our culture is rooted in harmony with nature and community.
-          </p>
+    <section id="culture" className="py-24 md:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-2xl"
+          >
+            <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Our Story</span>
+            <h2 className="text-5xl md:text-7xl font-serif font-bold text-primary-500 leading-[0.95] tracking-tighter">
+              Rooted in tradition, <br/>
+              <span className="italic font-light text-accent-500">defined by nature.</span>
+            </h2>
+          </motion.div>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg text-text-secondary font-medium max-w-sm leading-relaxed"
+          >
+            At Kulam, we believe the best stories are written slowly. Our homestay is a sanctuary for those seeking to reconnect with the earth.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {culturalHighlights.map((item, index) => (
-            <div
-              key={index}
-              className="bg-beige-50 rounded-lg p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+        {/* Focal Image Section */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="relative h-[400px] md:h-[600px] w-full rounded-3xl overflow-hidden mb-24 shadow-xl border border-border"
+        >
+          <Image
+            src="https://images.pexels.com/photos/1438834/pexels-photo-1438834.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="The Kulam Experience"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+            loading="lazy"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-primary-900/10 mix-blend-multiply" />
+        </motion.div>
+
+        {/* Highlights Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {cultureHighlights.map((item) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex flex-col"
             >
-              <div className="text-forest-600 flex justify-center mb-4">
+              <div className="text-accent-500 mb-6 p-4 bg-surface rounded-2xl w-fit transition-all duration-500 shadow-sm border border-border">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-semibold text-forest-900 mb-3">
-                {item.title}
-              </h3>
-              <p className="text-forest-700 leading-relaxed">{item.description}</p>
-            </div>
+              <h4 className="text-xl font-serif font-bold text-primary-500 mb-3">{item.title}</h4>
+              <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
+            </motion.div>
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-forest-700 to-forest-600 rounded-2xl p-8 md:p-12 text-white">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-6 text-center">
-              Experience Authentic Village Life
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-xl font-semibold mb-3">Daily Activities</h4>
-                <ul className="space-y-2 text-beige-100">
-                  <li>• Morning yoga by the pond</li>
-                  <li>• Traditional cooking workshops</li>
-                  <li>• Organic farming participation</li>
-                  <li>• Evening storytelling sessions</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold mb-3">Cultural Events</h4>
-                <ul className="space-y-2 text-beige-100">
-                  <li>• Festival celebrations</li>
-                  <li>• Folk music performances</li>
-                  <li>• Craft-making workshops</li>
-                  <li>• Community gatherings</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

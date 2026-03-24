@@ -21,3 +21,15 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Build outputs
+.next
+.tsbuildinfo
+
+# IDE
+.cursor
+.vscode
+
+# OS
+Thumbs.db
+nul

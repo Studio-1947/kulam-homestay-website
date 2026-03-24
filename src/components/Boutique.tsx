@@ -1,99 +1,78 @@
-import { ShoppingBag, Sparkles, Package, Gift } from 'lucide-react';
+"use client";
+
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { boutiqueHighlights } from '@/data/boutique';
 
 const Boutique = () => {
-  const products = [
-    {
-      icon: <Package className="w-10 h-10" />,
-      title: 'Handwoven Textiles',
-      description: 'Beautiful traditional fabrics crafted by local artisans',
-      image: 'https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=800',
-    },
-    {
-      icon: <Sparkles className="w-10 h-10" />,
-      title: 'Organic Spices',
-      description: 'Freshly ground spices from our organic farm',
-      image: 'https://images.pexels.com/photos/4198751/pexels-photo-4198751.jpeg?auto=compress&cs=tinysrgb&w=800',
-    },
-    {
-      icon: <Gift className="w-10 h-10" />,
-      title: 'Pottery & Ceramics',
-      description: 'Unique handmade pottery using traditional techniques',
-      image: 'https://images.pexels.com/photos/1350560/pexels-photo-1350560.jpeg?auto=compress&cs=tinysrgb&w=800',
-    },
-    {
-      icon: <ShoppingBag className="w-10 h-10" />,
-      title: 'Natural Soaps',
-      description: 'Handcrafted soaps with local herbs and essential oils',
-      image: 'https://images.pexels.com/photos/4202388/pexels-photo-4202388.jpeg?auto=compress&cs=tinysrgb&w=800',
-    },
-  ];
-
   return (
-    <section id="boutique" className="py-20 bg-gradient-to-br from-beige-50 to-beige-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-forest-900 mb-4">
-            Local Boutique Shop
-          </h2>
-          <div className="w-24 h-1 bg-beige-600 mx-auto mb-6"></div>
-          <p className="text-lg text-forest-700 max-w-3xl mx-auto leading-relaxed">
-            Take a piece of Kulam home with you. Our boutique features authentic,
-            handcrafted products made by talented local artisans using traditional
-            methods passed down through generations.
-          </p>
+    <section id="boutique" className="py-24 md:py-32 bg-surface-dark/30">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        {/* Editorial Header - Matching "Our Story" style */}
+        <div className="flex flex-col md:flex-row items-start justify-between mb-24 gap-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl"
+          >
+            <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Our Community</span>
+            <h2 className="text-5xl md:text-7xl font-serif font-bold text-primary-500 leading-[0.95] tracking-tighter">
+              A circle of <br/>
+              <span className="italic font-light text-accent-500">mutual growth.</span>
+            </h2>
+          </motion.div>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg text-text-secondary font-medium max-w-sm leading-relaxed"
+          >
+            Every purchase and service at Kulam directly empowers Mirik's local artisans and their families, ensuring traditional skills thrive.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+        {/* Simplified Highlights List (Matching "Our Story" pattern) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-24">
+          {boutiqueHighlights.map((item) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex flex-col"
             >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
+              <div className="text-accent-500 mb-6 p-4 bg-background rounded-2xl w-fit transition-all duration-500 shadow-sm border border-border">
+                {item.icon}
               </div>
-              <div className="p-6">
-                <div className="text-forest-600 mb-3">{product.icon}</div>
-                <h3 className="text-xl font-semibold text-forest-900 mb-2">
-                  {product.title}
-                </h3>
-                <p className="text-forest-700">{product.description}</p>
-              </div>
-            </div>
+              <h4 className="text-xl font-serif font-bold text-primary-500 mb-3 tracking-tight">{item.title}</h4>
+              <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-xl">
-          <div className="max-w-4xl mx-auto text-center">
-            <ShoppingBag className="w-16 h-16 text-beige-600 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold text-forest-900 mb-4">
-              Support Local Artisans
-            </h3>
-            <p className="text-lg text-forest-700 leading-relaxed mb-6">
-              Every purchase directly supports local families and helps preserve
-              traditional crafts. We work with over 50 artisans from surrounding
-              villages, ensuring fair trade and sustainable livelihoods.
+        {/* Bottom Social Impact Banner */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="p-10 md:p-16 bg-primary-500 rounded-3xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10"
+        >
+          <div className="max-w-xl text-left">
+            <h3 className="text-3xl font-serif font-bold text-white mb-4">Supporting 50+ local families.</h3>
+            <p className="text-white/70 text-sm font-medium leading-relaxed">
+              When you choose Kulam, you aren't just visiting a place—you are becoming part of a story that preserves culture and supports sustainable livelihoods in Mirik.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
-              <div className="bg-beige-50 rounded-lg p-6">
-                <p className="text-3xl font-bold text-forest-800 mb-2">100%</p>
-                <p className="text-forest-700">Handmade Products</p>
-              </div>
-              <div className="bg-beige-50 rounded-lg p-6">
-                <p className="text-3xl font-bold text-forest-800 mb-2">50+</p>
-                <p className="text-forest-700">Local Artisans</p>
-              </div>
-              <div className="bg-beige-50 rounded-lg p-6">
-                <p className="text-3xl font-bold text-forest-800 mb-2">Fair</p>
-                <p className="text-forest-700">Trade Practices</p>
-              </div>
-            </div>
           </div>
-        </div>
+          <button className="flex-shrink-0 group flex items-center gap-4 bg-white text-primary-500 px-8 py-4 rounded-full text-xs font-black tracking-widest uppercase hover:bg-accent-500 hover:text-white transition-all duration-500 shadow-xl">
+            Meet the Makers <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+        </motion.div>
+
       </div>
     </section>
   );
