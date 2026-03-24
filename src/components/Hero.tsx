@@ -99,13 +99,21 @@ const Hero = () => {
           <p className="text-white font-sans text-base leading-relaxed mb-8 text-legible font-medium">
             A sanctuary for the soul, where modern minimalism meets the timeless traditions of slow living.
           </p>
-          <div className="flex gap-8 items-center">
+          <div className="flex gap-4 items-center">
             <button 
               onClick={() => document.getElementById('rooms')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group px-8 py-3 bg-white text-primary-500 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase flex items-center gap-3 hover:bg-accent-500 hover:text-white transition-all duration-500 shadow-xl"
+              className="group px-6 py-3 bg-white text-primary-500 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase flex items-center gap-3 hover:bg-accent-500 hover:text-white transition-all duration-500 shadow-xl"
             >
-              The Collection 
+              View Our Rooms
             </button>
+            <a 
+              href="https://wa.me/918373819862"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-6 py-3 bg-accent-500 text-white rounded-full text-[10px] font-bold tracking-[0.3em] uppercase flex items-center gap-3 hover:bg-white hover:text-primary-500 transition-all duration-500 shadow-xl"
+            >
+              Book Now
+            </a>
           </div>
         </div>
 

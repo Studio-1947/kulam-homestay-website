@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { MapPin, Instagram, Facebook, Youtube, ArrowRight } from 'lucide-react';
+import { MapPin, Instagram, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { siteConfig } from '@/data/config';
 
@@ -35,21 +35,14 @@ const Footer = () => {
               </p>
               
               <div className="flex gap-6 mt-10">
-                {[
-                  { Icon: Instagram, href: siteConfig.socialLinks.instagram },
-                  { Icon: Facebook, href: siteConfig.socialLinks.facebook },
-                  { Icon: Youtube, href: siteConfig.socialLinks.youtube },
-                ].map(({ Icon, href }, i) => (
-                  <a 
-                    key={i}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full border border-white/10 hover:border-accent-500 hover:text-accent-500 transition-all duration-500 group"
-                  >
-                    <Icon size={20} className="group-hover:scale-110 transition-transform" />
-                  </a>
-                ))}
+                <a 
+                  href={siteConfig.socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full border border-white/10 hover:border-accent-500 hover:text-accent-500 transition-all duration-500 group"
+                >
+                  <Instagram size={20} className="group-hover:scale-110 transition-transform" />
+                </a>
               </div>
             </motion.div>
           </div>
@@ -64,14 +57,44 @@ const Footer = () => {
             >
               <h4 className="text-[10px] font-black tracking-[0.4em] text-accent-500 uppercase mb-8">Navigation</h4>
               <ul className="space-y-4">
-                {['Home', 'Our Story', 'The Rooms', 'Mirik Guide', 'Contact'].map((link) => (
-                  <li key={link}>
-                    <button className="text-white/50 hover:text-white transition-colors font-bold text-sm uppercase tracking-widest flex items-center gap-2 group">
-                      <div className="w-0 h-px bg-accent-500 group-hover:w-4 transition-all" />
-                      {link}
-                    </button>
-                  </li>
-                ))}
+                <li>
+                  <button 
+                    onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-white/50 hover:text-white transition-colors font-bold text-sm uppercase tracking-widest flex items-center gap-2 group"
+                  >
+                    <div className="w-0 h-px bg-accent-500 group-hover:w-4 transition-all" />
+                    Home
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => document.getElementById('culture')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-white/50 hover:text-white transition-colors font-bold text-sm uppercase tracking-widest flex items-center gap-2 group"
+                  >
+                    <div className="w-0 h-px bg-accent-500 group-hover:w-4 transition-all" />
+                    Our Story
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => document.getElementById('rooms')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-white/50 hover:text-white transition-colors font-bold text-sm uppercase tracking-widest flex items-center gap-2 group"
+                  >
+                    <div className="w-0 h-px bg-accent-500 group-hover:w-4 transition-all" />
+                    The Rooms
+                  </button>
+                </li>
+                <li>
+                  <a 
+                    href="https://wa.me/918373819862"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/50 hover:text-white transition-colors font-bold text-sm uppercase tracking-widest flex items-center gap-2 group"
+                  >
+                    <div className="w-0 h-px bg-accent-500 group-hover:w-4 transition-all" />
+                    Contact
+                  </a>
+                </li>
               </ul>
             </motion.div>
           </div>

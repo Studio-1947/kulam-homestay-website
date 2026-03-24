@@ -2,12 +2,12 @@ export interface NavLink {
   id: string;
   label: string;
   subtitle: string;
+  href?: string;
 }
 
 export const navLinks: NavLink[] = [
-  { id: 'home', label: 'Home', subtitle: 'Return to start' },
+  { id: 'home', label: 'Home', subtitle: 'Welcome' },
   { id: 'culture', label: 'Our Story', subtitle: 'Tradition & Ethos' },
-  { id: 'rooms', label: 'Sanctuaries', subtitle: 'View the rooms' },
-  { id: 'boutique', label: 'Boutique', subtitle: 'Curated goods' },
-  { id: 'special', label: 'Book Stay', subtitle: 'Reserve your time' },
+  { id: 'rooms', label: 'The Rooms', subtitle: 'View the rooms' },
+  { id: 'contact', label: 'Contact', subtitle: 'Get in touch', href: 'https://wa.me/918373819862' },
 ];
