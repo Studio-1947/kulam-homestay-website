@@ -102,8 +102,8 @@ const Navigation = () => {
             >
               <div>
                 <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase block mb-6">Contact</span>
-                <p className="text-white text-2xl font-serif italic mb-2">ruputhapa77@gmail.com</p>
-                <p className="text-white/60 font-sans font-medium">+91 83738 19862</p>
+                <p className="text-white text-2xl font-serif italic mb-2">thaparajat33@gmail.com</p>
+                <p className="text-white/60 font-sans font-medium">+91 82500 26001</p>
               </div>
 
               <div>
@@ -176,10 +176,10 @@ const Navigation = () => {
                <div className="flex gap-8">
                  <Instagram size={22} />
                </div>
-               <div className="flex flex-col gap-1 text-left">
-                 <a href="mailto:ruputhapa77@gmail.com" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">ruputhapa77@gmail.com</a>
-                 <a href="tel:+918373819862" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">+91 83738 19862</a>
-               </div>
+                <div className="flex flex-col gap-1 text-left">
+                  <a href="mailto:thaparajat33@gmail.com" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">thaparajat33@gmail.com</a>
+                  <a href="tel:+918250026001" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">+91 82500 26001</a>
+                </div>
             </div>
           </motion.div>
         )}
