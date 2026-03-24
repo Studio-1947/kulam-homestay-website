@@ -1,34 +1,39 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './app/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {
-        forest: {
-          50: '#f0f7f4',
-          100: '#dceee5',
-          200: '#b9ddcb',
-          300: '#8dc5aa',
-          400: '#5fa685',
-          500: '#3f8a66',
-          600: '#2d6e51',
-          700: '#245842',
-          800: '#1f4636',
-          900: '#1a3a2d',
-        },
-        beige: {
-          50: '#faf9f7',
-          100: '#f5f3ef',
-          200: '#ebe7dd',
-          300: '#ddd6c7',
-          400: '#ccc1ad',
-          500: '#baab93',
-          600: '#a8947a',
-          700: '#8a7560',
-          800: '#6f5e4d',
-          900: '#5a4d3f',
-        },
+      fontFamily: {
+        serif: ['var(--font-playfair)', 'serif'],
+        sans: ['var(--font-inter)', 'sans-serif'],
       },
+      colors: {
+        // Grounded Organic Palette (High Contrast Refinement)
+        background: '#FDFBF7',
+        surface: '#F4EFE6',
+        'surface-dark': '#EBE4D5',
+        primary: {
+          500: '#1B4332', 
+          600: '#143024',
+          900: '#08130E', // Deepest forest for overlays
+        },
+        accent: {
+          500: '#A88944', 
+          600: '#8E7339',
+          700: '#755F2D', // Higher contrast gold for small text
+        },
+        text: {
+          primary: '#121212',
+          secondary: '#333333',
+          muted: '#555555',
+          inverse: '#FDFBF7', // Use background color as inverse text
+        },
+        border: 'rgba(27, 67, 50, 0.15)',
+      },
+      textShadow: {
+        sm: '0 1px 2px rgba(0, 0, 0, 0.1)',
+        md: '0 2px 4px rgba(0, 0, 0, 0.2)',
+      }
     },
   },
   plugins: [],
