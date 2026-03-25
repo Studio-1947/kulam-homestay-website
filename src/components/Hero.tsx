@@ -97,7 +97,7 @@ const Hero = () => {
       >
         <div className="max-w-sm">
           <p className="text-white font-sans text-base leading-relaxed mb-8 text-legible font-medium">
-            A sanctuary for the soul, where modern minimalism meets the timeless traditions of slow living.
+            A peaceful mountain retreat in Mirik, nestled amid lush tea gardens and pine forests of the Darjeeling hills.
           </p>
           <div className="flex gap-4 items-center">
             <button 
@@ -118,8 +118,8 @@ const Hero = () => {
         </div>
 
         <div className="hidden lg:block text-right">
-          <span className="text-accent-500 text-[10px] font-bold tracking-[0.3em] uppercase block mb-2 text-legible">Branding Philosophy</span>
-          <span className="text-white font-serif italic text-3xl text-legible">Nature's Gentle Rhythm</span>
+          <span className="text-accent-500 text-[10px] font-bold tracking-[0.3em] uppercase block mb-2 text-legible">Our Essence</span>
+          <span className="text-white font-serif italic text-3xl text-legible">Experience Authentic Hill Life</span>
         </div>
       </motion.div>
 

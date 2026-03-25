@@ -11,7 +11,7 @@ const Boutique = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Editorial Header - Matching "Our Story" style */}
-        <div className="flex flex-col md:flex-row items-start justify-between mb-24 gap-8">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

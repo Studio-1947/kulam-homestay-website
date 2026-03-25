@@ -15,10 +15,10 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: 'Kulam Homestay',
-  tagline: "Nature's Gentle Rhythm",
+  tagline: "A Peaceful Mountain Retreat in Mirik",
   email: 'stay@kulamhomestay.com',
   phone: '+91 XXXXX XXXXX',
-  address: 'Village Road, Mirik, Darjeeling',
+  address: 'Mirik, Darjeeling, West Bengal',
   location: 'Mirik, West Bengal, India',
   socialLinks: {
     instagram: 'https://www.instagram.com/kulamhomestay2025/',

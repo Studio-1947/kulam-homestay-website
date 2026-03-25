@@ -9,27 +9,27 @@ export interface CultureHighlight {
 
 export const cultureHighlights: CultureHighlight[] = [
   {
-    id: 'warm-hospitality',
+    id: 'mountain-hospitality',
     icon: <Heart className="w-6 h-6" />,
     title: 'Warm Hospitality',
-    description: 'Experience genuine care that makes you feel like family from the moment you arrive.',
+    description: 'Experience genuine care that makes you feel like family, where every guest is a part of our mountain home.',
   },
   {
-    id: 'community-living',
+    id: 'tea-garden-life',
     icon: <Users className="w-6 h-6" />,
-    title: 'Community Living',
-    description: 'Engage with local traditions and create meaningful connections with the village.',
+    title: 'Tea Garden Life',
+    description: 'Engage with the rhythms of our hillside tea garden, from plucking sessions to refreshing tea-tasting.',
   },
   {
-    id: 'sustainable-heart',
+    id: 'nature-connection',
     icon: <Leaf className="w-6 h-6" />,
-    title: 'Sustainable Heart',
-    description: 'We honor nature through organic farming, rainwater harvesting, and eco-living.',
+    title: 'Peaceful Nature',
+    description: 'Discover the calm of pine forests and the fresh air of Mirik, away from the noise of city life.',
   },
   {
-    id: 'ancient-wisdom',
+    id: 'local-traditions',
     icon: <Book className="w-6 h-6" />,
-    title: 'Ancient Wisdom',
-    description: 'Learn traditional cooking and time-honored crafts passed down through generations.',
+    title: 'Local Lifestyle',
+    description: 'Immerse yourself in authentic mountain traditions and enjoy delicious, home-cooked local meals.',
   },
 ];
