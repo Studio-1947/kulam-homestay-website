@@ -11,7 +11,7 @@ const Boutique = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Editorial Header - Matching "Our Story" style */}
-        <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-24 gap-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const Boutique = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-text-secondary font-medium max-w-sm leading-relaxed"
+            className="text-lg text-text-secondary font-medium max-w-sm leading-relaxed text-left md:text-right"
           >
             Discover authentic handcrafted goods made by Mirik's skilled artisans. Each piece tells a story of tradition, passion, and timeless craftsmanship.
           </motion.p>
