@@ -1,4 +1,4 @@
-import { Star, TreePine, Home, Utensils, Sun, Moon } from 'lucide-react';
+import { Star, TreePine, Leaf, Utensils, Sun, Moon } from 'lucide-react';
 
 export interface SpecialFeature {
   id: string;
@@ -8,10 +8,10 @@ export interface SpecialFeature {
 }
 
 export const specialFeatures: SpecialFeature[] = [
-  { id: 'nature', icon: <TreePine size={18} />, title: 'Pristine Nature', description: 'Lush Mirik hills.' },
-  { id: 'soul', icon: <Home size={18} />, title: 'Authentic Soul', description: 'Traditional builds.' },
-  { id: 'food', icon: <Utensils size={18} />, title: 'Farm-to-Table', description: 'Organic local meals.' },
-  { id: 'luxury', icon: <Sun size={18} />, title: 'Quiet Luxury', description: 'True digital detox.' },
-  { id: 'wellness', icon: <Moon size={18} />, title: 'Find Your Center', description: 'Yoga & Meditation.' },
-  { id: 'care', icon: <Star size={18} />, title: 'Intimate Care', description: 'Limited guest families.' },
+  { id: 'nature', icon: <TreePine size={18} />, title: 'Lush Forests', description: 'Pine-covered hills.' },
+  { id: 'tea', icon: <Leaf size={18} />, title: 'Tea Garden', description: 'In-house plantation.' },
+  { id: 'food', icon: <Utensils size={18} />, title: 'Local Meals', description: 'Authentic home cooking.' },
+  { id: 'view', icon: <Sun size={18} />, title: 'Valley Views', description: 'Breathtaking sunsets.' },
+  { id: 'peace', icon: <Moon size={18} />, title: 'Pure Calm', description: 'Away from city noise.' },
+  { id: 'care', icon: <Star size={18} />, title: 'Warm Care', description: 'Family-like atmosphere.' },
 ];

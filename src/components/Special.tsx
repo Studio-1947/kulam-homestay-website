@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Star, ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Image from 'next/image';
 import { specialFeatures } from '@/data/special';
 
@@ -25,7 +25,7 @@ const Special = () => {
                 <span className="italic font-light text-accent-500">beyond.</span>
               </h2>
               <p className="text-xl text-text-secondary font-medium leading-relaxed mb-16 max-w-md">
-                Kulam is a curated short story of slow living. We've removed the noise to make room for nature's gentle rhythm.
+                Kulam is your gateway to the tranquil life of Mirik. We've created a space where you can relax amidst tea gardens and find peace in the pine forests.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10 mb-16">
@@ -43,7 +43,7 @@ const Special = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-serif font-bold text-primary-500 mb-1">{feature.title}</h4>
-                      <p className="text-sm text-text-muted font-bold tracking-widest uppercase">{feature.description}</p>
+                      <p className="text-text-muted text-sm leading-relaxed">{feature.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -82,7 +82,7 @@ const Special = () => {
               className="absolute bottom-0 left-0 w-[55%] h-[45%] rounded-2xl overflow-hidden shadow-2xl z-30 border-[10px] border-background"
             >
               <Image
-                src="/tea.jpg"
+                src="/dinning5.jpg"
                 alt="Local Tea Culture"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -100,7 +100,7 @@ const Special = () => {
               className="absolute top-[15%] left-[-10%] w-[40%] h-[30%] rounded-xl overflow-hidden shadow-xl z-20 border-[6px] border-background hidden md:block"
             >
               <Image
-                src="/bath1.jpg"
+                src="/mirik1.png"
                 alt="Authentic Details"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -32,7 +32,7 @@ const Culture = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg text-text-secondary font-medium max-w-sm leading-relaxed"
           >
-            At Kulam, we believe the best stories are written slowly. Our homestay is a sanctuary for those seeking to reconnect with the earth.
+            At Kulam, we offer a peaceful escape into the heart of Mirik. Our homestay is a sanctuary for those seeking to experience authentic hill life and the beauty of nature.
           </motion.p>
         </div>
 
@@ -45,7 +45,7 @@ const Culture = () => {
           className="relative h-[400px] md:h-[600px] w-full rounded-3xl overflow-hidden mb-24 shadow-xl border border-border"
         >
           <Image
-            src="https://images.pexels.com/photos/1438834/pexels-photo-1438834.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            src="/outside3.png"
             alt="The Kulam Experience"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"

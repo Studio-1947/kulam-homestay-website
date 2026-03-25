@@ -31,7 +31,7 @@ const Footer = () => {
                 <h3 className="text-4xl font-serif font-bold tracking-tighter">{siteConfig.name}<span className="text-accent-500">.</span></h3>
               </div>
               <p className="text-white/60 text-lg leading-relaxed max-w-md font-sans font-medium italic">
-                "A boutique homestay in Mirik, where every moment is a short story of slow living and authentic discovery."
+                "A boutique homestay in Mirik, offering a peaceful mountain retreat amidst lush tea gardens and warm hospitality."
               </p>
               
               <div className="flex gap-6 mt-10">
