@@ -102,7 +102,7 @@ const Navigation = () => {
             >
               <div>
                 <span className="text-accent-500 font-bold tracking-[0.3em] text-[10px] uppercase block mb-6">Contact</span>
-                <p className="text-white text-2xl font-serif italic mb-2">thaparajat33@gmail.com</p>
+                <p className="text-white text-2xl font-serif italic mb-2">kulamnivas2024@gmail.com</p>
                 <p className="text-white/60 font-sans font-medium">+91 82500 26001</p>
               </div>
 
@@ -117,15 +117,15 @@ const Navigation = () => {
             </motion.div>
 
             {/* Main Links */}
-            <div className="flex-1 relative flex flex-col p-10 lg:p-24 justify-center">
+            <div className="flex-1 relative flex flex-col p-6 sm:p-10 lg:p-24 justify-center overflow-x-hidden">
               <button 
                 onClick={() => setIsOpen(false)}
-                className="absolute top-10 right-10 lg:top-20 lg:right-20 text-white/60 hover:text-white transition-colors flex items-center gap-3 uppercase text-[10px] font-black tracking-[0.2em]"
+                className="absolute top-6 right-6 sm:top-10 sm:right-10 lg:top-20 lg:right-20 text-white/60 hover:text-white transition-colors flex items-center gap-3 uppercase text-[10px] font-black tracking-[0.2em]"
               >
-                Close <X size={32} strokeWidth={1.5} />
+                Close <X size={24} strokeWidth={1.5} />
               </button>
 
-              <div className="flex flex-col space-y-8 lg:space-y-6">
+              <div className="flex flex-col space-y-6 sm:space-y-8 lg:space-y-6 mt-12 sm:mt-16">
                 {navLinks.map((link, i) => (
                   link.href ? (
                     <a
@@ -133,18 +133,18 @@ const Navigation = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group text-left flex items-baseline gap-4 md:gap-8"
+                      className="group text-left flex items-baseline gap-3 sm:gap-4 md:gap-8"
                     >
-                      <span className="text-accent-500/40 font-serif italic text-xl md:text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
+                      <span className="text-accent-500/40 font-serif italic text-xl sm:text-xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
                       <div className="flex flex-col">
-                        <span className="text-3xl md:text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
+                        <span className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
                           {link.label}
                         </span>
                         <span className="text-[10px] md:text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
                           {link.subtitle}
                         </span>
                       </div>
-                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={32} />
+                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={28} />
                     </a>
                   ) : (
                     <motion.button
@@ -153,18 +153,18 @@ const Navigation = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.1 * i + 0.3, duration: 0.6 }}
                       onClick={() => scrollToSection(link.id)}
-                      className="group text-left flex items-baseline gap-4 md:gap-8"
+                      className="group text-left flex items-baseline gap-3 sm:gap-4 md:gap-8"
                     >
-                      <span className="text-accent-500/40 font-serif italic text-xl md:text-3xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
+                      <span className="text-accent-500/40 font-serif italic text-xl sm:text-xl group-hover:text-accent-500 transition-colors">0{i + 1}</span>
                       <div className="flex flex-col">
-                        <span className="text-3xl md:text-5xl lg:text-8xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
+                        <span className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-serif font-bold text-white tracking-tighter group-hover:italic transition-all duration-300">
                           {link.label}
                         </span>
                         <span className="text-[10px] md:text-[11px] font-bold tracking-[0.3em] uppercase text-accent-500 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300">
                           {link.subtitle}
                         </span>
                       </div>
-                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={32} />
+                      <ArrowRight className="text-accent-500 opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition-all duration-300 hidden sm:block" size={28} />
                     </motion.button>
                   )
                 ))}
@@ -172,12 +172,12 @@ const Navigation = () => {
             </div>
 
             {/* Mobile Bottom Footer */}
-            <div className="lg:hidden p-10 mt-auto border-t border-white/10 flex flex-col gap-4 text-white">
+            <div className="lg:hidden p-6 sm:p-10 mt-auto border-t border-white/10 flex flex-col gap-4 text-white">
                <div className="flex gap-8">
                  <Instagram size={22} />
                </div>
                 <div className="flex flex-col gap-1 text-left">
-                  <a href="mailto:thaparajat33@gmail.com" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">thaparajat33@gmail.com</a>
+                  <a href="mailto:kulamnivas2024@gmail.com" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">kulamnivas2024@gmail.com</a>
                   <a href="tel:+918250026001" className="text-[10px] font-bold tracking-widest uppercase opacity-60 text-accent-500 hover:text-white transition-colors">+91 82500 26001</a>
                 </div>
             </div>

@@ -56,7 +56,7 @@ const Culture = () => {
         </motion.div>
 
         {/* Highlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cultureHighlights.map((item) => (
             <motion.div
               key={item.id}
@@ -64,9 +64,9 @@ const Culture = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex flex-col"
+              className="p-6 bg-surface rounded-2xl border border-border shadow-sm"
             >
-              <div className="text-accent-500 mb-6 p-4 bg-surface rounded-2xl w-fit transition-all duration-500 shadow-sm border border-border">
+              <div className="text-accent-500 mb-4 p-4 bg-background rounded-xl w-fit">
                 {item.icon}
               </div>
               <h4 className="text-xl font-serif font-bold text-primary-500 mb-3">{item.title}</h4>

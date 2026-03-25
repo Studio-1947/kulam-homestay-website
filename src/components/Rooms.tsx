@@ -34,7 +34,7 @@ const Rooms = () => {
   useEffect(() => {
     controls.start({
       x: ["0%", "-50%"],
-      transition: { duration: 35, repeat: Infinity, ease: "linear" }
+      transition: { duration: 70, repeat: Infinity, ease: "linear" }
     });
   }, []);
 
@@ -50,7 +50,7 @@ const Rooms = () => {
     // Resume the animation
     controls.start({
       x: ["0%", "-50%"],
-      transition: { duration: 35, repeat: Infinity, ease: "linear" }
+      transition: { duration: 70, repeat: Infinity, ease: "linear" }
     });
   };
 
@@ -82,7 +82,7 @@ const Rooms = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-20"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-20"
         >
           {features.map((feature, i) => (
             <div 
