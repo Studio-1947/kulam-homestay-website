@@ -81,7 +81,7 @@ const Boutique = () => {
             </p>
           </div>
           <a 
-            href="https://wa.me/918373819862"
+            href="https://wa.me/918250026001"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 group flex items-center gap-4 bg-white text-primary-500 px-8 py-4 rounded-full text-xs font-black tracking-widest uppercase hover:bg-accent-500 hover:text-white transition-all duration-500 shadow-xl"

@@ -114,7 +114,7 @@ const Hero = () => {
               View Our Rooms
             </button>
             <a 
-              href="https://wa.me/918373819862"
+              href="https://wa.me/918250026001"
               target="_blank"
               rel="noopener noreferrer"
               className="group px-6 py-3 bg-accent-500 text-white rounded-full text-[10px] font-bold tracking-[0.3em] uppercase flex items-center gap-3 hover:bg-white hover:text-primary-500 transition-all duration-500 shadow-xl"
@@ -176,7 +176,7 @@ const Hero = () => {
                   View Our Rooms
                 </button>
                 <a 
-                  href="https://wa.me/918373819862"
+                  href="https://wa.me/918250026001"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group px-6 py-3 bg-accent-500 text-white rounded-full text-[10px] font-bold tracking-[0.3em] uppercase flex items-center gap-3 hover:bg-white hover:text-primary-500 transition-all duration-500 shadow-xl"
