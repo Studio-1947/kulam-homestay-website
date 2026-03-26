@@ -8,7 +8,7 @@ import { Wifi, Car, UtensilsCrossed, Flame, TreePine, Mountain, MapPin, Sunrise,
 
 const roomImages = [
   '/room1.jpg', '/room2.jpg', '/room3.jpg', '/room4.jpg', '/room5.jpg',
-  '/room6.jpg', '/room7.jpg', '/room8.jpg', '/room9.jpg', '/room10.jpg',
+  '/room6.jpg', '/room7.jpg', '/room8.jpg', '/room9.jpeg', '/room10.jpeg',
   '/bathroom1.jpg', '/bathroom2.jpg', '/dinning1.jpg', '/dinning2.jpg', '/dinning3.jpg',
   '/dinning4.jpg', '/dinning5.jpg'
 ];
