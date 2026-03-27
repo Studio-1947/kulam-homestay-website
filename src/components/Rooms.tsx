@@ -34,7 +34,7 @@ const Rooms = () => {
   useEffect(() => {
     controls.start({
       x: ["0%", "-50%"],
-      transition: { duration: 70, repeat: Infinity, ease: "linear" }
+      transition: { duration: 105, repeat: Infinity, ease: "linear" }
     });
   }, []);
 
@@ -50,7 +50,7 @@ const Rooms = () => {
     // Resume the animation
     controls.start({
       x: ["0%", "-50%"],
-      transition: { duration: 70, repeat: Infinity, ease: "linear" }
+      transition: { duration: 105, repeat: Infinity, ease: "linear" }
     });
   };
 
@@ -118,7 +118,7 @@ const Rooms = () => {
                 <motion.div 
                   key={i}
                   onClick={() => handleImageClick(src)}
-                  className="flex-shrink-0 w-48 md:w-72 h-32 md:h-48 rounded-lg overflow-hidden shadow-md border border-border relative cursor-zoom-in"
+                  className="flex-shrink-0 w-56 md:w-80 h-36 md:h-52 rounded-lg overflow-hidden shadow-md border border-border relative cursor-zoom-in"
                   whileHover={{ scale: 1.05 }}
                 >
                   <Image
@@ -126,7 +126,7 @@ const Rooms = () => {
                     alt={`Room ${(i % roomImages.length) + 1}`}
                     fill
                     unoptimized
-                                        sizes="280px"
+                                        sizes="320px"
                     className="object-cover"
                   />
                 </motion.div>
