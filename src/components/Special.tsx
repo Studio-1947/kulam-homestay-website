@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
 import Image from 'next/image';
 import { specialFeatures } from '@/data/special';
 
@@ -107,21 +106,6 @@ const Special = () => {
                 loading="lazy"
                 className="object-cover"
               />
-            </motion.div>
-
-            {/* Floating Trust Badge */}
-            <motion.div
-              initial={{ opacity: 0, rotate: -10 }}
-              whileInView={{ opacity: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 1 }}
-              className="absolute top-[-20px] right-[-20px] bg-accent-500 p-8 rounded-full shadow-2xl z-40 flex flex-col items-center justify-center text-white"
-            >
-              <div className="flex gap-0.5 mb-1">
-                {[...Array(5)].map((_, i) => <Star key={i} size={10} fill="white" />)}
-              </div>
-              <span className="text-2xl font-serif font-bold leading-none">4.9</span>
-              <span className="text-[8px] font-black tracking-widest uppercase opacity-80">Rating</span>
             </motion.div>
 
           </div>
