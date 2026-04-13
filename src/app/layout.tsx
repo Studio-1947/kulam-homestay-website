@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Kulam Homestay",
     images: [
       {
-        url: "https://yoursite.com/kk.png",
+        url: "https://www.kulamhomestay.in/kk.png",
         width: 1200,
         height: 630,
         alt: "Kulam Homestay - A Boutique Retreat in Kerala",
