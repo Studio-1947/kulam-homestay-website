@@ -253,7 +253,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-text-muted uppercase tracking-wider">Check-out</p>
-                  <p className="text-lg font-bold text-primary-500">12:00</p>
+                  <p className="text-lg font-bold text-primary-500">11:00</p>
                 </div>
               </div>
             </div>
