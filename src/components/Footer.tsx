@@ -174,7 +174,10 @@ const Footer = () => {
 
         {/* Bottom Utility Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-black tracking-[0.3em] text-white/20 uppercase">
-          <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
+            <p>Designed by <a href="https://www.1947.io" target="_blank" rel="noopener noreferrer" className="text-accent-500 hover:text-white hover:underline transition-colors">studio 1947</a></p>
+          </div>
           <div className="flex gap-10">
             <button className="hover:text-accent-500 transition-colors">Privacy Policy</button>
             <button className="hover:text-accent-500 transition-colors">Terms of Stay</button>
